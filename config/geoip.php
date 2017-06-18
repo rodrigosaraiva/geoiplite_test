@@ -13,11 +13,20 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | GeoIP Country File Zipped
+    |--------------------------------------------------------------------------
+    |
+    | Return the name of the GeoIp Country Zipped File.
+    */
+    'file_zipped' => env('GEOIP_FILE_ZIPPED', 'geoip.zip'),
+
+    /*
+    |--------------------------------------------------------------------------
     | GeoIP Country File
     |--------------------------------------------------------------------------
     |
     | Return the name of the GeoIp Country CSV File.
     */
-    'file' => env('GEOIP_FILE', 'geoip.csv')
+    'file' => env('GEOIP_FILE', 'GeoIPCountryWhois.csv')
 
 ];

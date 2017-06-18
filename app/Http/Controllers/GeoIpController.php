@@ -2,10 +2,24 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Country;
 use Illuminate\Http\Request;
+use App\Validators\ValidateIP;
+use App\Jobs\PopulateDatabase;
 
 class GeoIpController extends Controller
 {
+
+    public function __construct()
+    {
+        $countries = Country::count();
+        if ($countries <= 0) {
+            dispatch(new PopulateDatabase());
+            abort(503, 'Come back soon. We are updating out database.');
+        }
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -40,12 +54,14 @@ class GeoIpController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $ip
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($ip)
     {
-        //
+        if (!ValidateIP::validate($ip)) {
+            abort(400, 'Invalid IP');
+        }
     }
 
     /**
