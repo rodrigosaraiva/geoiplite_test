@@ -73,7 +73,9 @@ Usage
 Use the application is simple:
 
 http://yourappbaseURL/api/v1/geoip/127.0.0.1
+
 http://yourappbaseURL/api/v1/geoip/5.133.204.200
+
 http://yourappbaseURL/api/v1/geoip/127.0.0.543
 
 At the first time, the app you return a 503 error code because the database is empty.
