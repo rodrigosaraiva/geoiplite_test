@@ -17,8 +17,8 @@ class CreateGeoipsTable extends Migration
             $table->increments('id');
             $table->string('start_ip');
             $table->string('end_ip');
-            $table->integer('start_number_ip');
-            $table->integer('end_number_ip');
+            $table->bigInteger('start_number_ip');
+            $table->bigInteger('end_number_ip');
             $table->integer('country_id')->unsigned();
             $table->timestamps();
 

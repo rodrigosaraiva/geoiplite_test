@@ -26,8 +26,8 @@ class Country extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function geoips()
+    public function geoIps()
     {
-        return $this->hasMany('App\Geoip', 'country_id');
+        return $this->hasMany('App\GeoIp', 'country_id');
     }
 }

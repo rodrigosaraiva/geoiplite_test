@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Geoip extends Model
+class GeoIp extends Model
 {
     /**
      * The table associated with the model.

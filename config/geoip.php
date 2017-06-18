@@ -9,6 +9,15 @@ return [
     | Return the URL to download the GeoIp Country CSV File.
     */
 
-    'file_url' => env('GEOIP_FILE_URL', 'http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip')
+    'file_url' => env('GEOIP_FILE_URL', 'http://geolite.maxmind.com/download/geoip/database/GeoIPCountryCSV.zip'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | GeoIP Country File
+    |--------------------------------------------------------------------------
+    |
+    | Return the name of the GeoIp Country CSV File.
+    */
+    'file' => env('GEOIP_FILE', 'geoip.csv')
 
 ];
