@@ -177,6 +177,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * Laravel API Doc Generator
+         */
+        Mpociot\ApiDoc\ApiDocGeneratorServiceProvider::class,
+
     ],
 
     /*
